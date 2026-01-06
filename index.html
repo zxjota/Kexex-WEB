@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - TOMKERTY</title>
+    <title>Privacy Policy - Kexex</title>
     <style>
         :root {
             --primary-color: #4361ee;
@@ -127,6 +127,14 @@
             margin-top: 0.5rem;
             font-weight: 500;
             border: 1px solid var(--medium-gray);
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s;
+        }
+        
+        .email-contact:hover {
+            background-color: var(--primary-color);
+            color: white;
         }
         
         .footer {
@@ -155,6 +163,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
             z-index: 100;
+            display: none;
         }
         
         .back-to-top:hover {
@@ -195,14 +204,14 @@
 <body>
     <div class="privacy-container">
         <div class="header">
-            <div class="app-name">TOMKERTY</div>
+            <div class="app-name">Kexex</div>
             <h1>Privacy Policy</h1>
-            <div class="last-updated">Last Updated: <span id="current-date">January 4, 2026</span></div>
+            <div class="last-updated">Last Updated: <span id="current-date">January 6, 2026</span></div>
         </div>
         
         <div class="content">
             <div class="section">
-                <p>This Privacy Policy explains how <span class="highlight">TOMKERTY</span> ("we", "our", or "us") collects, uses, discloses, and safeguards your information when you use our application. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
+                <p>This Privacy Policy explains how <span class="highlight">Kexex</span> ("we", "our", or "us") collects, uses, discloses, and safeguards your information when you use our application. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
                 
                 <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "Last Updated" date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.</p>
             </div>
@@ -284,7 +293,7 @@
             
             <div class="section">
                 <h2>6. Third-Party Services</h2>
-                <p>Our application may contain links to third-party websites or services that are not owned or controlled by TOMKERTY. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. We strongly advise you to review the privacy policy of every site you visit.</p>
+                <p>Our application may contain links to third-party websites or services that are not owned or controlled by Kexex. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. We strongly advise you to review the privacy policy of every site you visit.</p>
                 
                 <p>We may use third-party service providers to facilitate our application, provide the application on our behalf, perform application-related services, or assist us in analyzing how our application is used.</p>
             </div>
@@ -303,7 +312,7 @@
         </div>
         
         <div class="footer">
-            <p>© <span id="current-year">2026</span> TOMKERTY. All rights reserved.</p>
+            <p>© <span id="current-year">2026</span> Kexex. All rights reserved.</p>
             <p>This Privacy Policy applies only to our application and not to any third-party websites or services that may be linked from our application.</p>
         </div>
     </div>
@@ -339,34 +348,6 @@
                 top: 0,
                 behavior: 'smooth'
             });
-        });
-        
-        // Highlight current section in navigation
-        const sections = document.querySelectorAll('.section');
-        const observerOptions = {
-            root: null,
-            rootMargin: '-20% 0px -70% 0px',
-            threshold: 0
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    if (id) {
-                        document.querySelectorAll('nav a').forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${id}`) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                }
-            });
-        }, observerOptions);
-        
-        sections.forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>
